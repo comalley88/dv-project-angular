@@ -13,8 +13,8 @@ export class PostsComponent implements OnInit {
 
   constructor(private postsService: PostsService) {}
 
-  addPost(data) {
-    console.log("hey");
+  handleAddPost(data) {
+    console.log(data);
   }
 
   ngOnInit() {
