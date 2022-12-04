@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IComment, Post, User } from './models';
+import { IComment, IMessage, Post, User } from './models';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +13,9 @@ export class PostsService {
     return this.http.get<Array<Post>>(
       'https://jsonplaceholder.typicode.com/posts'
     );
+  }
+  addPost(data: Post): Observable<Post> {
+    return this.http.post<Post>(this.apiUrl + '/posts/', data);
   }
   getUsers(): Observable<Array<User>> {
     return this.http.get<Array<User>>(this.apiUrl + '/users');

@@ -1,16 +1,11 @@
 <form (ngSubmit)="onSubmit()">
   <div>
     <label>message</label>
-    <input type="text" name="message" [(ngModel)]="message" id="message" />
+    <input type="text" name="body" [(ngModel)]="body" id="body" />
     <label>name</label>
-    <input type="text" name="name" [(ngModel)]="name" id="name" />
+    <input type="text" name="title" [(ngModel)]="title" id="title" />
     <label>company name</label>
-    <input
-      type="text"
-      name="companyName"
-      [(ngModel)]="companyName"
-      id="companyName"
-    />
+    <input type="text" name="userId" [(ngModel)]="userId" id="userId" />
     <input type="submit" value="Submit" />
   </div>
 </form>

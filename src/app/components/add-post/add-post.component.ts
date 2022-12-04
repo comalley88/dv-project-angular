@@ -8,21 +8,21 @@ import { IMessage } from '../../models';
 })
 export class AddPostComponent implements OnInit {
   @Output() OnAddPost = new EventEmitter();
-  message: string = '';
-  name: string = '';
-  companyName: string = '';
+  userId: string = '';
+  body: string = '';
+  title: string = '';
   constructor() {}
 
   onSubmit() {
     const data = {
-      name: this.name,
-      companyName: this.companyName,
-      message: this.message,
+      userId: this.userId,
+      body: this.body,
+      title: this.title,
     };
 
     this.OnAddPost.emit(data);
 
-    (this.name = ''), (this.companyName = ''), (this.message = '');
+    (this.userId = ''), (this.title = ''), (this.body = '');
   }
   ngOnInit() {}
 }
