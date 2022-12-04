@@ -1,0 +1,7 @@
+<div *ngIf="showMe">
+  <div *ngFor="let comment of comments">
+  <p>name: {{ comment.name }}</p>
+  <p>email: {{ comment.email }}</p>
+  <p>message: {{ comment.body }}</p>
+  </div>
+</div>

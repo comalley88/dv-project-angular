@@ -1,0 +1,6 @@
+<p>{{ this.user.name }}</p>
+<p>{{ this.user.company.name }}</p>
+<p>{{ post.body }}</p>
+<app-button (btnClick)="onToggleComments()" text="View Comments"></app-button>
+<app-button (btnClick)="onClickA()" text="Add Comments"></app-button>
+<app-comments [showMe]="showComments" [post]="post"></app-comments>
