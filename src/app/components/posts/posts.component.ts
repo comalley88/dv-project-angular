@@ -12,9 +12,11 @@ export class PostsComponent implements OnInit {
   posts: Post[];
 
   constructor(private postsService: PostsService) {}
-  addPost(data: Post) {
-    console.log(data);
+
+  addPost(data) {
+    console.log("hey");
   }
+
   ngOnInit() {
     this.postsService.getMessages().subscribe((res) => (this.posts = res));
   }

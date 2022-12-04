@@ -7,7 +7,7 @@ import { IMessage } from '../../models';
   styleUrls: ['./add-post.component.css'],
 })
 export class AddPostComponent implements OnInit {
-  @Output() OnAddPost: EventEmitter<IMessage> = new EventEmitter();
+  @Output() OnAddPost = new EventEmitter();
   message: string = '';
   name: string = '';
   companyName: string = '';
@@ -19,6 +19,7 @@ export class AddPostComponent implements OnInit {
       companyName: this.companyName,
       message: this.message,
     };
+
     this.OnAddPost.emit(data);
 
     (this.name = ''), (this.companyName = ''), (this.message = '');
