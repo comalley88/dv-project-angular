@@ -1,1 +1,16 @@
-<p>test</p>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>message</label>
+    <input type="text" name="message" [(ngModel)]="message" id="message" />
+    <label>name</label>
+    <input type="text" name="name" [(ngModel)]="name" id="name" />
+    <label>company name</label>
+    <input
+      type="text"
+      name="companyName"
+      [(ngModel)]="companyName"
+      id="companyName"
+    />
+    <input type="submit" value="Submit" />
+  </div>
+</form>

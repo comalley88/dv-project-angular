@@ -22,3 +22,9 @@ export interface IComment {
   email: string;
   body: string;
 }
+
+export interface IMessage {
+  name: string;
+  companyName: string;
+  message: string;
+}
