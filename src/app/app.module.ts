@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
@@ -19,6 +21,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     PostCardComponent,
     ButtonComponent,
     CommentsComponent,
+    AddPostComponent,
+    HeaderComponent,
   ],
   bootstrap: [AppComponent],
 })
